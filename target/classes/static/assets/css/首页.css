@@ -1,0 +1,187 @@
+body{
+	font-family:sans-serif;
+	overflow-x: scroll;
+	overflow-y: scroll;
+}
+
+body::-webkit-scrollbar{
+	display: none;
+}
+
+@keyframes heart{
+  0% {transform:translate(0,0) }
+  100% {transform:translate(0,15px)}/* 下浮高度 */
+}
+
+@keyframes rotateAndStay {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(45deg); }
+}
+
+.homeBackground{
+  position: absolute;
+	margin-top:0;
+	width:100%;
+  height: 100%;
+}
+
+
+
+.system_anima{
+  width: 25vw;
+  height: 45vw;
+  position: absolute;
+  top: 4vh;
+  left: 24vw;
+  -webkit-animation: rotateAndStay 1.4s ease-in-out forwards;
+  -moz-animation: rotateAndStay 1.4s ease-in-out forwards;
+  -ms-animation: rotateAndStay 1.4s ease-in-out forwards;
+  -o-animation: rotateAndStay 1.4s ease-in-out forwards;
+  animation: rotateAndStay 1.4s ease-in-out forwards;
+  /* -webkit-animation: heart 1.4s ease-in-out infinite alternate;
+  -moz-animation: heart 1.4s ease-in-out infinite alternate;
+  -ms-animation: heart 1.4s ease-in-out infinite alternate;
+  -o-animation: heart 1.4s ease-in-out infinite alternate;
+  animation: heart 1.4s ease-in-out infinite alternate; */
+  /* animation: heart 1.4s ease-in-out infinite alternate; */
+}
+
+.news_anima{
+  width: 20.2vw;
+  height: 20.2vw;
+  position: absolute;
+  top: 53vh;
+  left: 58vw;
+  animation: heart 1.4s ease-in-out infinite alternate;
+}
+
+.people_anima{
+  width: 18.2vw;
+  height: 20.5vw;
+  position: absolute;
+  top: 58vh;
+  left: 37vw;
+  animation: heart 1.4s ease-in-out infinite alternate;
+}
+
+.history_anima{
+  width: 20.2vw;
+  height: 20.2vw;
+  position: absolute;
+  top: 17vh;
+  left: 50vw;
+  animation: heart 1.4s ease-in-out infinite alternate;
+}
+
+.msg{
+  width: 9.2vw;
+  height: 3.1vw;
+  padding:3px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 1.7vw;
+  font-weight: 600;
+  opacity: 0;
+  box-shadow: 0px 0px 5px  #3b3b3b;
+  color: #fefefe;
+  letter-spacing:1.2px;
+  animation: heart 1.4s ease-in-out infinite alternate;
+  transition: opacity 0.5s;
+}
+
+#systemMsg{
+  position: absolute;
+  top: 30vh;
+  left: 24vw;
+  background-image: linear-gradient(to right, #C2E9FB, #A1C4FD);
+}
+
+#newsMsg{
+  position: absolute;
+  top: 70vh;
+  left: 78vw;
+  background-image: linear-gradient(to right, #a5e7f0, #b4a1e0);
+}
+
+#peopleMsg{
+  position: absolute;
+  top: 78vh;
+  left: 30vw;
+  background-image: linear-gradient(to right, #f0d5b7, #f09ede);
+}
+
+#historyMsg{
+  position: absolute;
+  top: 30vh;
+  left: 70vw;
+  background-image: linear-gradient(to right, #e69d87, #f0d5b7);
+}
+
+.news_anima:hover ~#newsMsg, .system_anima:hover ~#systemMsg,
+.people_anima:hover ~#peopleMsg, .history_anima:hover ~#historyMsg{
+  opacity: 1;
+  transition-duration: 0.5s;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+/* 菜单 */
+.header-area {
+  background-color: #fbffff;
+  box-shadow:  8px 8px 16px #b8bdc0,
+               -8px -8px 16px #ffffff;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  position: absolute;
+  left: 2px;
+  right: 2px;
+  height: 13vh;
+}
+/* 左边的冬奥小屋图标 */
+.logologo {
+	margin-left:40px;
+    line-height: 15vh;
+    float: left;
+}
+
+.logo1{
+  height:3.5vw
+}
+
+.logo2{
+  height: 4vw;
+}
+
+/* 右边的四个选择菜单 */
+.nav {
+  float: right;
+  margin-top: 5vh;
+  position: relative;
+  z-index: 300;
+}
+/* 四个菜单之间的距离 */
+.nav li {
+	margin-right:2vw;
+}
+/* 四个选项 冬奥信息馆等... */
+.nav li a {
+  font-weight: 700;
+  font-size: 1.5vw;
+  color: #595959;
+  line-height: 6vh;
+  letter-spacing: 1.2px;
+}
+
+/* 鼠标放上菜单字体颜色改变 */
+.nav li:hover a{
+  color: #3333CC!important;
+}
+/* 菜单对应小图标样式 */
+.nav img{
+	width:2.9vw;
+	height:2.9vw;
+	margin-right:2px;
+}
+

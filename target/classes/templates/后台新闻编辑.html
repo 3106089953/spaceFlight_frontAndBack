@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" th:href="@{/spaceflight/vendor/bootstrap/css/bootstrap.min.css}" />
+	<link rel="icon" type="images/x-icon" th:href="@{/spaceflight/assets/images/favicon.ico}" />
+	<link rel="stylesheet" th:href="@{/spaceflight/assets/css/global.css}" />
+	<link rel="stylesheet" th:href="@{/spaceflight/assets/css/login.css}" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+	<title>后台新闻编辑页</title>
+</head>
+<body>
+	<div class="nk-container">
+		<!-- 头部 -->
+		<header class="bg-light sticky-top" style="box-shadow: 5px 5px 5px #4f4fcddb;">
+			<div class="container" style="vertical-align: middle;height: 70px;">
+				<!-- 导航 -->
+				<nav class="navbar navbar-expand-lg navbar-dark">
+					<!-- logo -->
+					<a class="navbar-brand" href="#"></a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+				</nav>
+			</div>
+		</header>
+
+		<!-- 内容 -->
+		<div class="main">
+			<div class="container pl-5 pr-5 pt-3 pb-3 mt-3 mb-3" style="padding-top: 40px!important;">	
+				<!-- 提示框 -->
+				<div class="modal fade" id="hintModal" tabindex="-1" role="dialog" aria-labelledby="hintModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="hintModalLabel">提示</h5>
+							</div>
+							<div class="modal-body" id="hintBody"></div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 内容框 -->
+				<div style="font-family: '楷体'; font-size: 17px;">
+					<div class="modal-dialog modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="publishModalLabel">新闻信息编辑</h5>
+							</div>
+							<div class="modal-body">
+								<form  method="post" th:action="@{/spaceflight/updateNews}">
+									<div class="form-group">
+										<label for="id" class="col-form-label">新闻编号：</label>
+										<input type="text" class="form-control" name="id" id="id" th:value="${news.id}">
+									</div>
+									<div class="form-group">
+										<label for="title1" class="col-form-label">主标题：</label>
+										<input type="text" class="form-control" name="title1" id="title1" th:value="${news.title1}">
+									</div>
+									<div class="form-group">
+										<label for="title2" class="col-form-label">子标题：</label>
+										<input type="text" class="form-control" name="title2" id="title2" th:value="${news.title2}">
+									</div>
+									<div class="form-group">
+										<label for="imgUrl" class="col-form-label">图片链接：</label>
+										<input type="text" class="form-control" name="imgUrl" id="imgUrl" th:value="${news.imgUrl}">
+									</div>
+									<div class="form-group">
+										<label for="url" class="col-form-label">新闻链接：</label>
+										<input type="text" class="form-control" name="url" id="url" th:value="${news.url}">
+									</div>
+									<div class="form-group">
+										<label for="time" class="col-form-label">创建时间：</label>
+										<input type="text" class="form-control" name="time" id="time" th:value="${#dates.format(news.time, 'yyyy-MM-dd')}">
+									</div>
+									<div class="modal-footer">
+										<a th:href="@{/spaceflight/getAdminNewsPage}">
+											<button type="button" class="btn btn-secondary">返回</button>
+										</a>
+										<button type="submit" class="btn btn-primary">保存</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 尾部 -->
+		<footer class="bg-dark" style="background-color: #3333cc!important;">
+			<div class="container">
+				<div class="row">
+					<!-- 火箭 -->
+					<div class="col-4 qrcode">
+						<img th:src="@{/spaceflight/assets/images/后台管理_火箭.png}" class="img-thumbnail" style="width:136px;" />
+					</div>
+					<!-- 提示信息 -->
+					<div class="col-4 detail">
+						<div class="row">
+							<div class="col">
+								<ul class="nav btn-group-vertical company-info">
+									<li class="nav-item text-white-80" style="font-weight: 800; font-size: large;">
+										<i class="bi bi-heart"></i> 页面介绍：
+									</li>
+									<li class="nav-item text-white-80" style="font-size: medium;">
+										该页面主要用于进行新闻的详细信息的编辑
+									</li>
+									<li class="nav-item text-white-80" style="font-weight: 800; font-size: large;">
+										<i class="bi bi-book"></i> 温馨提示：
+									</li>
+									<li class="nav-item text-white-80" style="font-size: medium;">
+										如果需要查看对应的数据内容，请跳转到
+										<a th:href="@{/spaceflight/getNewsPage}" class="nav-item text-white-80">新闻主页</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- 宇航员 -->
+					 <div class="col-4 qrcode">
+						<img th:src="@{/spaceflight/assets/images/后台管理_宇航员.png}"  class="img-thumbnail" style="width:136px;" />
+					</div>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+
+	
+</body>
+</html>

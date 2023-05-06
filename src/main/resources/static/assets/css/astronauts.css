@@ -1,0 +1,19 @@
+.box1:nth-child(1) .box{
+    background-image: url(../images/atro1.jpg);
+  }
+
+  .box1:nth-child(2) .box{
+      background-image: url(../images/atro2.jpg);
+  }
+
+  .box1:nth-child(3) .box{
+      background-image: url(../images/atro3.jpg);
+  }
+
+  .box1:nth-child(4) .box{
+      background-image: url(../images/atro4.jpg);
+  }
+.box1 .box{
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}

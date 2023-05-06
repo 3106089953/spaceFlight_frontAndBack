@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="utf-8">
+  <title>航天系统</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" th:href="@{/spaceflight/assets/images/favicon.ico}" />
+  <link rel="stylesheet" th:href="@{/spaceflight/assets/css/航天系统.css}">
+  <link rel="stylesheet" th:href="@{/spaceflight/assets/css/history.css}">
+  <script th:src="@{/spaceflight/js/timeLine.js}"></script>
+  <script th:src="@{/spaceflight/echarts/echarts.js}"></script>
+  <script th:src="@{/spaceflight/js/jquery.js}"></script>
+  <script th:src="@{/spaceflight/js/engine.js}"></script>
+  <script th:src="@{/spaceflight/js/history.js}"></script>
+</head>
+
+<body>
+<main>
+  <section class="system full">
+
+    <article class="item work">
+      <picture>
+        <img th:src="@{/spaceflight/assets/images/timelineBackground.png}" alt="" style="opacity:0.25;">
+        <div class="load"></div>
+      </picture>
+
+      <div class="caption">
+        <a th:href="@{/spaceflight}">
+          <button class="return">
+                <span class="circle" aria-hidden="true">
+                    <span class="icon arrow"></span>
+                </span>
+            <span class="button-text">Home</span>
+          </button>
+        </a>
+        <a th:href="@{/spaceflight/getSystemDescription}">
+          <button data-text="系统描述" class="btn-primary btn-ghost btn-border-stroke  btn-text-float-up Data">
+            <div class="btn-borders">
+              <div class="border-top"></div>
+              <div class="border-right"></div>
+              <div class="border-bottom"></div>
+              <div class="border-left"></div>
+            </div>
+            <span class="btn-text">系统描述</span>
+          </button>
+        </a>
+        <div class="container_1">
+          <div id="echart1" style="width: 900px; height: 350px; "></div>
+          <script th:src="@{/spaceflight/js/echart1.js}"></script>
+          <div class="card3" style="width: 360px; height: 350px; ">
+            <img th:src="@{/spaceflight/assets/images/中国航天.png}" alt="" style="width: 300px; height: 300px; ">
+            <ul>
+              <li><span>2021年目前中国在轨卫星总数为431颗</span>
+                <div class="liquid"></div>
+              </li>
+              <li><span>2021年目前航天器入轨数量为253颗</span>
+                <div class="liquid"></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="container_2">
+          <div id="card_1" style="width: 500px; height: 300px; ">
+            <script th:src="@{/spaceflight/js/card_1.js}"></script>
+          </div>
+          <div id="card_2" style="width: 500px; height: 300px;  ">
+            <script th:src="@{/spaceflight/js/card_2.js}"></script>
+          </div>
+
+        </div>
+      </div>
+
+    </article>
+
+  </section>
+</main>
+</body>
+
+</html>

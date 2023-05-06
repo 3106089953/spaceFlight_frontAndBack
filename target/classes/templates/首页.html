@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>首页</title>
+		<link th:href="@{/spaceflight/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+		<link rel="icon" type="images/x-icon" th:href="@{/spaceflight/assets/images/favicon.ico}" />
+		<link rel="stylesheet" th:href="@{/spaceflight/assets/css/首页.css}">
+	</head>
+
+	<body>
+		<div class="header-area">
+			<nav class="upmenu">
+				<div class="logologo">
+					<a href="http://www.baidu.com" target="_blank" style="width: 200px; height: 200px;">
+						<img class="logo1" th:src="@{/spaceflight/assets/images/首页房屋1.png}" alt="" style="width: 80px; height: 80px;">
+					</a>
+					<img class="logo2" th:src="@{/spaceflight/assets/images/spaceFlight.png}" alt="" width="300px">
+				</div>
+				<ul class="nav">
+					<img th:src="@{/spaceflight/assets/images/航天新闻.png}" alt="">
+					<li class="scroll-to-section"><a th:href="@{/spaceflight/getNewsPage}">航天新闻</a></li>
+					
+					<img th:src="@{/spaceflight/assets/images/航天介绍.png}" alt="">
+					<li class="scroll-to-section"><a th:href="@{/spaceflight/getSystemDescription}">航天系统</a></li>
+					
+					<img th:src="@{/spaceflight/assets/images/人物介绍.png}" alt="">
+					<li class="scroll-to-section"><a th:href="@{/spaceflight/getAstronautsPage}">杰出人物</a></li>
+					
+					<img th:src="@{/spaceflight/assets/images/航天历史.png}" alt="">
+					<li class="scroll-to-section"><a th:href="@{/spaceflight/getHistoryPage}">航天历史</a></li>
+				</ul>
+			</nav>
+		</div>
+		
+		<div class="picture">
+			<img th:src="@{/spaceflight/assets/images/MountainHomeBackground3.png}" alt="" class="homeBackground">
+				
+			<a th:href="@{/spaceflight/getNewsPage}">
+				<img th:src="@{/spaceflight/assets/images/news.png}" class="news_anima">
+				<div class="msg" id="newsMsg">航天新闻</div>
+			</a>
+			<a th:href="@{/spaceflight/getSystemDescription}">
+				<img th:src="@{/spaceflight/assets/images/火箭1.png}" class="system_anima">
+				<div class="msg" id="systemMsg">航天系统</div>
+			</a>
+			<a th:href="@{/spaceflight/getAstronautsPage}">
+				<img th:src="@{/spaceflight/assets/images/宇航员.png}" class="people_anima">
+				<div class="msg" id="peopleMsg">杰出人物</div>			
+			</a>
+			<a th:href="@{/spaceflight/getHistoryPage}">
+				<img th:src="@{/spaceflight/assets/images/book1.png}" class="history_anima">
+				<div class="msg" id="historyMsg">航天历史</div>
+			</a>
+		</div>
+	</body>
+</html>

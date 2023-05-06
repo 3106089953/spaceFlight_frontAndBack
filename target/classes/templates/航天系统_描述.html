@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="utf-8">
+	<title>航天系统</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" th:href="@{/spaceflight/assets/images/favicon.ico}" />
+	<link rel="stylesheet" th:href="@{/spaceflight/assets/css/航天系统.css}">
+	<link rel="stylesheet" th:href="@{/spaceflight/assets/css/history.css}">
+	<script th:src="@{/spaceflight/js/timeLine.js}"></script>
+	<script th:src="@{/spaceflight/echarts/echarts.js}"></script>
+	<script th:src="@{/spaceflight/js/jquery.js}"></script>
+	<script th:src="@{/spaceflight/js/engine.js}"></script>
+
+</head>
+
+<body>
+	<main>
+		<section class="system full">
+			<article class="item news">
+				<picture>
+					<img th:src="@{/spaceflight/assets/images/timelineBackground.png}" alt="" height="100%" style="opacity:0.25;">
+					<div class="load"></div>
+				</picture>
+				<div class="caption">
+					<a th:href="@{/spaceflight}">
+						<button class="return">
+							<span class="circle" aria-hidden="true">
+								<span class="icon arrow"></span>
+							</span>
+							<span class="button-text">Home</span>
+						</button>
+					</a>
+					<a th:href="@{/spaceflight/getSystemDataPage}">
+						<button data-text="数据展现" class="btn-primary btn-ghost btn-border-stroke  btn-text-float-up Data">
+							<div class="btn-borders">
+								<div class="border-top"></div>
+								<div class="border-right"></div>
+								<div class="border-bottom"></div>
+								<div class="border-left"></div>
+							</div>
+							<span class="btn-text">数据展现</span>
+						</button>
+					</a>
+					<div class="largebox largebox2">
+						<div class="test" id="test1">
+							<img th:src="@{/spaceflight/assets/images/超清_神舟飞船模型图.png}" alt="" style="width: 200px; height: 200px;" />
+							<div class="introTitle">神舟飞船</div>
+							<div class="introText">
+								&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp“神舟”系列为载人飞船系统<br />
+								&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp是我国自主研发的用于天地往返运输人员和物资的载人航天器，已达到甚至优于国际第三代载人飞船技术，具有完全自主知识产权及鲜明的中国特色。<br />
+								<br />
+								<br />
+								<br />
+							</div>
+						</div>
+						<div class="test" id="test2">
+							<img th:src="@{/spaceflight/assets/images/超清_火箭.png}" alt="" style="width: 200px; height: 200px;" />
+							<div class="introTitle">火箭</div>
+							<div class="introText">
+								&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp火箭又称喷进器。<br />
+								&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp是一种利用排出物质以制造反作用力而前进的载具，运载火箭是而今人类克服地球引力、进入空间的唯一工具，是发展空间技术、确保空间安全的基石。目前我国已设计制造长征一号系列等众多火箭。<br />
+								<br />
+								<br />
+								<br />
+							</div>
+						</div>
+						<div class="test" id="test3">
+							<img th:src="@{/spaceflight/assets/images/超清_卫星.jpg}" alt="" style="width: 200px; height: 200px;" />
+							<div class="introTitle">卫星</div>
+							<div class="introText">
+								&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp又称为环绕地球在空间轨道上运行的无人航天器。<br />
+								&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp我国于1970年4月24日成功发射自行研制的第一颗人造卫星——东方红一号。我国目前已研制并发射东方红系列通信广播卫星、北斗系列导航定位卫星、探测系列科学与探测卫星等一系列数目众多的卫星。<br />
+								<br />
+								<br />
+								<br />
+							</div>
+						</div>
+						<div class="test" id="test4">
+							<img th:src="@{/spaceflight/assets/images/超清_中国空间站.png}" alt="" style="width: 200px; height: 200px;" />
+							<div class="introTitle">空间站</div>
+							<div class="introText">
+								&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp又称天宫空间站。<br />
+								&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp是我国建成的国家级太空实验室，该空间站设计寿命为10年，长期驻留3人，重量可达180吨，以进行较大规模的空间应用。天宫空间站由天和核心舱、问天实验舱和梦天实验舱三部分组成。<br />
+								<br />
+								<br />
+								<br />
+							</div>
+						</div>
+						<div class="test" id="test5">
+							<img th:src="@{/spaceflight/assets/images/超清_酒泉卫星发射中心.jpg}" alt="" style="width: 200px; height: 200px;" />
+							<div class="introTitle">酒泉发射中心</div>
+							<div class="introText">
+								&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp位于内蒙额济纳旗<br />
+								&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp是中国创建最早、规模最大的综合性导弹、卫星发射中心，测试及发射长征系列运载火箭、中低轨道的各种试验卫星、应用卫星、载人飞船和火箭导弹的主要基地，先后执行110次航天发射任务。<br />
+								<br />
+								<br />
+								<br />
+							</div>
+						</div>
+						<div class="test" id="test6">
+							<img th:src="@{/spaceflight/assets/images/超清_文昌发射中心.jpg}" alt="" style="width: 200px; height: 200px;" />
+							<div class="introTitle">文昌发射中心</div>
+							<div class="introText">
+								&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp位于海南文昌<br />
+								&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp可以满足地球同步卫星、大质量极轨卫星、空间站、深空探测等航天器发射任务，与中国现有其它航天发射中心相比，火箭航区、残骸落区安全性好，是一个生态环保、世界一流的现代化新型航天发射场。<br />
+								<br />
+								<br />
+								<br />
+							</div>
+						</div>
+						<div class="test" id="test7">
+							<img th:src="@{/spaceflight/assets/images/超清_太原发射中心.jpg}" alt="" style="width: 200px; height: 200px;" />
+							<div class="introTitle">太原发射中心</div>
+							<div class="introText">
+								&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp位于山西太原。<br />
+								&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp基地已建成具有多功能、多发射方式，集指挥控制、测控通信、综合保障系统于一体的现代化发射场，航天发射综合能力实现了从年执行1次发射任务到每年执行10次以上高密度火箭卫星发射任务的跃升。<br />
+								<br />
+								<br />
+								<br />
+							</div>
+						</div>
+						<div class="test" id="test8">
+							<img th:src="@{/spaceflight/assets/images/超清_西昌卫星发射中心.jpg}" alt="" style="width: 200px; height: 200px;" />
+							<div class="introTitle">西昌卫星发射中心</div>
+							<div class="introText">
+								&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp又称“西昌卫星城”<br />
+								&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp位于四川凉山彝族自治州，主要担负广播、通信和气象等地球同步轨道卫星发射的组织指挥、测试发射、残骸回收、试验技术研究等任务。<br />
+								<br />
+								<br />
+								<br />
+							</div>
+						</div>
+						<div class="test" id="test9">
+							<img th:src="@{/spaceflight/assets/images/超清_天舟飞船模拟图.png}" alt="" style="width: 200px; height: 200px;" />
+							<div class="introTitle">天舟飞船</div>
+							<div class="introText">
+								&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp“天舟”系列为货运飞船。<br />
+								&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp负责为空间站（或空间实验室）运输补给物资和载荷、补加推进剂、在轨存储和下行废弃物资，保障空间站航天员在轨中长期驻留。<br />
+								<br />
+								<br />
+								<br />
+							</div>
+						</div>
+						<div class="test" id="test10">
+						</div>
+						<div class="test" id="test11">
+						</div>
+						<div class="test" id="test12">
+						</div>
+						<div class="test" id="test13">
+						</div>
+
+						<div class="architecture">
+							<div class="title title1">
+								<img th:src="@{/spaceflight/assets/images/中国航天.png}" alt="">
+							</div>
+							<img class="message" id="img1" th:src="@{/spaceflight/assets/images/Spaceship.png}" alt=""
+								 style="position: absolute;top: 585px;right: 18vw;" onclick="display2('test1','test2','test3','test4','test5','test6','test7','test8','test9','test10','test11','test12','test13',
+									'img1','img2','img3','img4','img5','img6','img7','img8','img9','img10','img11','img12','img13')" />
+
+							<img class="message" id="img2" th:src="@{/spaceflight/assets/images/rocket.png}" alt=""
+								style="position: absolute;top: 530px;right: 27vw;" onclick="display2('test2','test1','test3','test4','test5','test6','test7','test8','test9','test10','test11','test12','test13',
+									'img2','img1','img3','img4','img5','img6','img7','img8','img9','img10','img11','img12','img13')" />
+
+							<img class="message" id="img3" th:src="@{/spaceflight/assets/images/satellite.png}" alt=""
+								style="position: absolute;top: 560px;right: 8vw;" onclick="display2('test3','test2','test1','test4','test5','test6','test7','test8','test9','test10','test11','test12','test13',
+									'img3','img2','img1','img4','img5','img6','img7','img8','img9','img10','img11','img12','img13')" />
+
+							<img class="message" id="img4" th:src="@{/spaceflight/assets/images/空间站.png}" alt=""
+								style="position: absolute;top:440px;right: 2vw;" onclick="display2('test4','test2','test3','test1','test5','test6','test7','test8','test9','test10','test11','test12','test13',
+									'img4','img2','img3','img1','img5','img6','img7','img8','img9','img10','img11','img12','img13')" />
+
+							<img class="message" id="img5" th:src="@{/spaceflight/assets/images/发射中心.jpg}" alt=""
+								 style="position: absolute;top: 270px;right: 3vw;" onclick="display2('test5','test2','test3','test4','test1','test6','test7','test8','test9','test10','test11','test12','test13',
+									'img5','img2','img3','img4','img1','img6','img7','img8','img9','img10','img11','img12','img13')" />
+
+							<img class="message" id="img6" th:src="@{/spaceflight/assets/images/发射中心1.jpg}" alt=""
+								style="position: absolute;top:155px;right: 11vw;" onclick="display2('test6','test2','test3','test4','test5','test1','test7','test8','test9','test10','test11','test12','test13',
+									'img6','img2','img3','img4','img5','img1','img7','img8','img9','img10','img11','img12','img13')" />
+
+
+							<img class="message" id="img7" th:src="@{/spaceflight/assets/images/太原发射中心.jpg}" alt=""
+								style="position: absolute;top: 175px;right: 22vw;" onclick="display2('test7','test2','test3','test4','test5','test6','test1','test8','test9','test10','test11','test12','test13',
+									'img7','img2','img3','img4','img5','img6','img1','img8','img9','img10','img11','img12','img13')" />
+
+							<img class="message" id="img8" th:src="@{/spaceflight/assets/images/西昌文化发射中心.jpg}" alt=""
+								style="position: absolute;top: 265px;right: 29vw;" onclick="display2('test8','test2','test3','test4','test5','test6','test7','test1','test9','test10','test11','test12','test13',
+									'img8','img2','img3','img4','img5','img6','img7','img1','img9','img10','img11','img12','img13')" />
+
+							<img class="message" id="img9" th:src="@{/spaceflight/assets/images/神舟飞船.png}" alt=""
+								style="position: absolute;top: 405px;right: 31vw" onclick="display2('test9','test2','test3','test4','test5','test6','test7','test8','test1','test10','test11','test12','test13',
+									'img9','img2','img3','img4','img5','img6','img7','img8','img1','img10','img11','img12','img13')" />
+
+
+							<img id="img14" th:src="@{/spaceflight/assets/images/航天系统_宇航员.png}" alt="" />
+						</div>
+					</div>
+				</div>
+			</article>
+		</section>
+	</main>
+</body>
+
+</html>

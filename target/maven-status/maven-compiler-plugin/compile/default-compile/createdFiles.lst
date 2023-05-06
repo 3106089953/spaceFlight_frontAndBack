@@ -1,0 +1,13 @@
+com\xiao\spaceflight\controller\NewsController.class
+com\xiao\spaceflight\service\NewsService.class
+com\xiao\spaceflight\controller\PeopleController.class
+com\xiao\spaceflight\pojo\Page.class
+com\xiao\spaceflight\controller\HistoryController.class
+com\xiao\spaceflight\pojo\NewsVO.class
+com\xiao\spaceflight\util\SpaceFlightConstant.class
+com\xiao\spaceflight\controller\SystemController.class
+com\xiao\spaceflight\mapper\NewsMapper.class
+com\xiao\spaceflight\service\impl\NewsServiceImpl.class
+com\xiao\spaceflight\controller\IndexController.class
+com\xiao\spaceflight\SpaceFlightInitApplication.class
+com\xiao\spaceflight\pojo\News.class

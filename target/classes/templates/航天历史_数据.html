@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" th:href="@{/spaceflight/assets/images/favicon.ico}" />
+    <link type="text/css" rel="styleSheet" th:href="@{/spaceflight/assets/css/history.css}" />
+    <link type="text/css" rel="styleSheet" th:href="@{/spaceflight/assets/css/historyData.css}" />
+    <script th:src="@{/spaceflight/echarts/echarts.js}"></script>
+    <title>航天历史</title>
+</head>
+
+<body>
+    <a th:href="@{/spaceflight}">
+        <button data-text="Home" class="btn btn-primary btn-ghost btn-border-stroke  btn-text-float-up">
+            <div class="btn-borders">
+                <div class="border-top"></div>
+                <div class="border-right"></div>
+                <div class="border-bottom"></div>
+                <div class="border-left"></div>
+            </div>
+            <span class="btn-text">HOME</span>
+        </button>
+    </a>
+    <a th:href="@{/spaceflight/getHistoryPage}">
+        <button data-text="时间线" class="btn-primary btn-ghost btn-border-stroke  btn-text-float-up Data">
+            <div class="btn-borders">
+                <div class="border-top"></div>
+                <div class="border-right"></div>
+                <div class="border-bottom"></div>
+                <div class="border-left"></div>
+            </div>
+            <span class="btn-text">时间线</span>
+        </button>
+    </a>
+    <div class="body-wrap">
+        <div class="inline">
+            <div id="lunchTimes"></div>
+            <script type="text/javascript" th:src="@{/spaceflight/js/lunchTimes.js}"></script>
+            <div class="introduce">
+                <h2>中国航天发射数量不断增加</h2>
+                <p>从2016年至2022年，中国航天的全年发射数量一直在不断增加中。</p>
+                <p>2022年，中国航天全年发射64次，超越2021年的55次，再创新高。其中，太原卫星发射中心发射17次（海上发射3次），西昌卫星发射中心发射22次（文昌发射场发射6次），酒泉卫星发射中心发射25次。
+                </p>
+                <p>全年长征系列运载火箭共实施宇航发射53次，快舟一号甲运载火箭4次，谷神星一号运载火箭2次，快舟十一号运载火箭与双曲线一号运载火箭各1次，力箭一号运载火箭、捷龙三号运载火箭、朱雀二号运载火箭为首次发射。
+                </p>
+            </div>
+        </div>
+        <div class="inline">
+            <div class="introduce second">
+                <h2>下游产业飞速发展</h2>
+                <p>从2015年至2021年，中国卫星导航与位置服务产业总体产值也在不断提升。</p>
+                <p>卫星运营、应用及服务包括为智能网联汽车、无人机、农机、工程机械、测绘仪器、
+                    机器人和物联网终端等提供服务等。</p>
+                <p>商业航天的兴起，促进了卫星导航与位置服务的创新发展，其主要细分市场为卫星遥感、卫星导航、移动通信、固定通信和大众消费。
+                    2021年我国卫星导航与位置服务产业总产值为4690亿元，增速为16.29%，卫星导航市场规模较大，约占总体的43%。</p>
+            </div>
+            <div id="commerce"></div>
+            <script type="text/javascript" th:src="@{/spaceflight/js/commerce.js}"></script>
+        </div>
+    </div>
+
+</body>
+
+</html>

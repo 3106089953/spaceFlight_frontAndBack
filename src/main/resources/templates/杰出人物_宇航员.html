@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" th:href="@{/spaceflight/assets/images/favicon.ico}" />
+  <link type="text/css" rel="styleSheet" th:href="@{/spaceflight/assets/css/history.css}" />
+  <link type="text/css" rel="styleSheet" th:href="@{/spaceflight/assets/css/distinguishPerson.css}" />
+  <link type="text/css" rel="styleSheet" th:href="@{/spaceflight/assets/css/astronauts.css}">
+  <title>杰出人物</title>
+</head>
+
+<body>
+  <a th:href="@{/spaceflight}">
+    <button data-text="Home" class="btn btn-primary btn-ghost btn-border-stroke  btn-text-float-up">
+      <div class="btn-borders">
+        <div class="border-top"></div>
+        <div class="border-right"></div>
+        <div class="border-bottom"></div>
+        <div class="border-left"></div>
+      </div>
+      <span class="btn-text">HOME</span>
+    </button>
+  </a>
+  <div class="leftAndRight">
+    <a>
+      <div class="circle-arrow left">
+        <svg viewBox="0 0 31.61 28.38" id="arrow" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M17 .16l-2 2.07A.54.54 0 0 0 15 3l8.29 8.29a.53.53 0 0 1-.38.91H.54a.54.54 0 0 0-.54.54v2.93a.54.54 0 0 0 .54.53h22.34a.54.54 0 0 1 .38.92L15 25.4a.54.54 0 0 0 0 .76l2 2.07a.54.54 0 0 0 .76 0l13.69-13.66a.54.54 0 0 0 0-.76L17.79.16a.54.54 0 0 0-.79 0z">
+          </path>
+        </svg>
+      </div>
+    </a>
+    <a th:href="@{/spaceflight/getScientistPage}">
+      <div class="circle-arrow right">
+        <svg viewBox="0 0 31.61 28.38" id="arrow" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M17 .16l-2 2.07A.54.54 0 0 0 15 3l8.29 8.29a.53.53 0 0 1-.38.91H.54a.54.54 0 0 0-.54.54v2.93a.54.54 0 0 0 .54.53h22.34a.54.54 0 0 1 .38.92L15 25.4a.54.54 0 0 0 0 .76l2 2.07a.54.54 0 0 0 .76 0l13.69-13.66a.54.54 0 0 0 0-.76L17.79.16a.54.54 0 0 0-.79 0z">
+          </path>
+        </svg>
+      </div>
+    </a>
+  </div>
+  <div class="body-wrap">
+    <h1>杰出宇航员</h1>
+    <div class="wrap">
+      <div class="box1">
+        <div class="box"></div>
+        <div class="mask">
+          杨利伟
+          <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp特级航天员，国际宇航科学院院士，中国载人航天工程副总设计师。</p>
+          <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp2003年10月15日，杨利伟执行中国首次载人航天飞行任务，乘神舟五号飞船在太空飞行21个小时，实现了中华民族的飞天梦想。
+            杨利伟是中国培养的第一代航天员，是中国进入太空的第一人。其成功完成太空之旅后，中国成为世界上第3个能够独立开展载人航天活动的国家。</p>
+        </div>
+      </div>
+      <div class="box1">
+        <div class="box"></div>
+        <div class="mask">
+          聂海胜
+          <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp中共党员，硕士学位。现为中国人民解放军航天员大队特级航天员，专业技术少将军衔。
+            曾任空军某中心飞行教员，安全飞行950小时，被评为空军一级飞行员。</p>
+          <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp2008年9月，聂海胜执行神舟七号飞行任务。在这次飞行任务中，聂海胜担任飞船指令长，是第一位出舱活动的中国人 。
+            同年11月，被中共中央、国务院、中央军委授予“航天英雄”荣誉称号，并获“航天功勋奖章”。</p>
+        </div>
+      </div>
+      <div class="box1">
+        <div class="box"></div>
+        <div class="mask">
+          王亚平
+          <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp中共党员，硕士学位，特级航天员。曾任空军航空兵某师某团副大队长，安全飞行1567小时，被评为空军二级飞行员。</p>
+          <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp2010年5月，王亚平入选中国第二批航天员。2013年6月执行神舟十号任务，历时15天，成为中国首位太空教师。2021年10月-2022年4月，她执行神舟十三号任务，
+            历时183天，共进行了三次太空授课。同时她也是中国首位进驻空间站、首位出舱活动的女航天员。 </p>
+        </div>
+      </div>
+      <div class="box1">
+        <div class="box"></div>
+        <div class="mask">
+          翟志刚
+          <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp中共党员，硕士学位。现为中国人民解放军航天员大队特级航天员，专业技术少将军衔。</p>
+          <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp2008年9月25日至27日的神舟七号飞行任务中，翟志刚担任飞船指令长，是第一位实现“太空漫步”的中国人 。同年11月，被中共中央、
+            国务院、中央军委授予“航天英雄”荣誉称号，并获“航天功勋奖章”。2018年1月，翟志刚被中宣部授予“时代楷模”荣誉称号  。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  "use strict";
+  CSS.registerProperty({
+    name: "--color",
+    syntax: "<color>",
+    initialValue: "transparent",
+    inherits: true
+  });
+  CSS.registerProperty({
+    name: "--pos",
+    syntax: "<integer>",
+    initialValue: "0",
+    inherits: true
+  });
+</script>
+
+</html>

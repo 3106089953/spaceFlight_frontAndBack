@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" th:href="@{/spaceflight/assets/images/favicon.ico}" />
+  <link type="text/css" rel="styleSheet" th:href="@{/spaceflight/assets/css/history.css}" />
+  <link type="text/css" rel="styleSheet" th:href="@{/spaceflight/assets/css/distinguishPerson.css}" />
+  <link type="text/css" rel="styleSheet" th:href="@{/spaceflight/assets/css/scientists.css}"/>
+  <title>杰出人物</title>
+</head>
+
+<body>
+  <a th:href="@{/spaceflight}">
+    <button data-text="Home" class="btn btn-primary btn-ghost btn-border-stroke  btn-text-float-up">
+      <div class="btn-borders">
+        <div class="border-top"></div>
+        <div class="border-right"></div>
+        <div class="border-bottom"></div>
+        <div class="border-left"></div>
+      </div>
+      <span class="btn-text">HOME</span>
+    </button>
+  </a>
+  <div class="leftAndRight">
+    <a th:href="@{/spaceflight/getAstronautsPage}">
+      <div class="circle-arrow left">
+        <svg viewBox="0 0 31.61 28.38" id="arrow" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M17 .16l-2 2.07A.54.54 0 0 0 15 3l8.29 8.29a.53.53 0 0 1-.38.91H.54a.54.54 0 0 0-.54.54v2.93a.54.54 0 0 0 .54.53h22.34a.54.54 0 0 1 .38.92L15 25.4a.54.54 0 0 0 0 .76l2 2.07a.54.54 0 0 0 .76 0l13.69-13.66a.54.54 0 0 0 0-.76L17.79.16a.54.54 0 0 0-.79 0z">
+          </path>
+        </svg>
+      </div>
+    </a>
+    <a>
+      <div class="circle-arrow right">
+        <svg viewBox="0 0 31.61 28.38" id="arrow" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M17 .16l-2 2.07A.54.54 0 0 0 15 3l8.29 8.29a.53.53 0 0 1-.38.91H.54a.54.54 0 0 0-.54.54v2.93a.54.54 0 0 0 .54.53h22.34a.54.54 0 0 1 .38.92L15 25.4a.54.54 0 0 0 0 .76l2 2.07a.54.54 0 0 0 .76 0l13.69-13.66a.54.54 0 0 0 0-.76L17.79.16a.54.54 0 0 0-.79 0z">
+          </path>
+        </svg>
+      </div>
+    </a>
+  </div>
+  <div class="body-wrap">
+     <h1>杰出科学家</h1>
+     <div class="wrap">
+      <div class="box1">
+        <div class="box"></div>
+        <div class="mask">
+          钱学森
+          <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp钱学森是中国航天科技事业的先驱和杰出代表，被誉为“中国航天之父”和“火箭之王”。</p>
+          <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp从20世纪40年代到60年代初期，钱学森在火箭与航天领域提出了若干重要的概念。他主持完成了“喷气和火箭技术的建立”规划，参与了中国第一颗人造卫星的研制，
+            制定了中国第一个星际航空的发展规划 。</p>
+          <p>在中国航天创建过程中，钱学森一直强调协同攻关、总体设计，并将其应用于社会系统工程理论与实践之中。这些理论与实践，成为中国航天事业成功的基石。</p>
+        </div>
+      </div>
+      <div class="box1">
+        <div class="box"></div>
+        <div class="mask">
+          周建平
+          <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp航天工程系统设计与技术管理专家，中国工程院院士，中国载人航天工程总设计师。周建平为突破和掌握空间出舱活动技术和交会对接技术，
+            建成试验性空间实验室工程大系统做出了重大贡献</p>
+          <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp2002年周建平，担任中国酒泉卫星发射中心总工程师和中国载人航天工程发射场系统总设计师；2004年担任中国载人航天工程副总设计师；
+            2006年担任中国载人航天工程总设计师；2013年当选为中国工程院院士；2019年获聘中国载人航天工程总设计师。</p>
+        </div>
+      </div>
+      <div class="box1">
+        <div class="box"></div>
+        <div class="mask">
+          梁守槃
+          <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp中国导弹总体和火箭技术专家，中国科学院院士，中国导弹与航天技术的重要开拓者之一。</p>
+          <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp1985年,梁守槃当选为国际宇航科学院院士。他还曾任中国航空航天工业部、航天工业公司高级技术顾问，中国航天科技集团公司和中国航天科工集团
+            公司高级技术顾问。他十分重视航天科技工业发展方向、发展战略、发展规划和技术途径等的制订工作，
+            曾多次提出关于航天科技工业管理体制和机构设置方面的建议，是航天技术重要开拓者。</p>
+        </div>
+      </div>
+      <div class="box1">
+        <div class="box"></div>
+        <div class="mask">
+          任新民
+          <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp航天技术与液体火箭发动机技术专家，中国导弹与航天技术的重要开拓者之一。</p>
+          <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp1985年，任新民当选为国际宇航科学院（IAA）院士 。他是中国航天事业五十年最高荣誉奖获得者，从事导弹与航天型号研制工作，
+            在液体发动机和型号总体技术上贡献卓著。曾作为运载火箭的技术负责人领导了中国第一颗人造卫星的发射；曾担任试验卫星通信、实用卫星通信、
+            风云一号气象卫星、发射外国卫星等六项大型航天工程的总设计师，主持研制和发射工作。是两弹一星元勋之一、“中国航天四老”之一。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  "use strict";
+  CSS.registerProperty({
+    name: "--color",
+    syntax: "<color>",
+    initialValue: "transparent",
+    inherits: true
+  });
+  CSS.registerProperty({
+    name: "--pos",
+    syntax: "<integer>",
+    initialValue: "0",
+    inherits: true
+  });
+</script>
+
+</html>

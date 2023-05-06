@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+        <meta charset="UTF-8">
+        <title>航天新闻</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link rel="icon" th:href="@{/spaceflight/assets/images/favicon.ico}" />
+        <link rel='stylesheet' th:href='@{/spaceflight/assets/css/swiper.min.css}'>
+        <link rel="stylesheet" th:href="@{/spaceflight/assets/css/style.css}">
+        <link type="text/css" rel="styleSheet" th:href="@{/spaceflight/assets/css/history.css}" />
+        <link rel="stylesheet" th:href="@{/spaceflight/js/animation.js}">
+        <script defer th:src="@{/spaceflight/js/jquery.js}"></script>
+        <script defer th:src="@{/spaceflight/js/timeLine.js}"></script>
+</head>
+<body>
+    <a th:href="@{/spaceflight}">
+        <button class="return" style="z-index: 100; margin-top: -50px">
+            <span class="circle" aria-hidden="true">
+                <span class="icon arrow"></span>
+            </span>
+            <span class="button-text">
+                Home
+            </span>
+        </button>
+    </a>
+    <a th:href="@{/spaceflight/getAdminNewsPage}">
+        <button data-text="新闻管理" class="btn-primary btn-ghost btn-border-stroke  btn-text-float-up Data">
+          <div class="btn-borders">
+            <div class="border-top"></div>
+            <div class="border-right"></div>
+            <div class="border-bottom"></div>
+            <div class="border-left"></div>
+          </div>
+          <span class="btn-text">新闻管理</span>
+        </button>
+      </a>
+    <div class="wrapper">
+        <div class="background"> 
+            <img th:src="@{/spaceflight/assets/images/timelineBackground.png}" alt="" style="opacity:0.3;">
+        </div>
+        <div class="item-bg">
+        </div>
+        <div class="news-slider">
+                <div class="news-slider__wrp swiper-wrapper" style="font-family: '楷体';">
+                    <div class="news-slider__item swiper-slide" th:each="newsVO : ${newsVOList}">
+                        <a th:href="${newsVO.url}" class="news__item">
+                            <div class="news-date"> 
+                                <span class="news-date__title" th:text="${newsVO.day}">
+                                    14
+                                </span> 
+                                <span class="news-date__txt" th:text="${newsVO.month}">
+                                    March
+                                </span> 
+                            </div>
+                            <div class="news__title" th:text="${newsVO.title1}">
+                                2023，那些载人航天两会声音！
+                            </div>
+                            <p class="news__txt" th:text="${newsVO.title2}">
+                                今年政府工作报告中再次提到载人航天，我们一同回顾载人航天工程领域的代表委员们发出的铿锵有力的“两会之声”。
+                            </p>
+                            <div class="news__img"> 
+                                <img th:src="@{|/spaceflight${newsVO.imgUrl}|}" alt="news">
+                            </div>
+                        </a> 
+                    </div>
+
+                </div>
+                <div class="news-slider__ctr">
+                    <div class="news-slider__arrows">
+                        <button class="news-slider__arrow news-slider-prev">
+                            <span class="icon-font">
+                                <svg class="icon icon-arrow-left">
+                                    <use xlink:href="#icon-arrow-left">
+                                    </use>
+                                </svg>
+                            </span> 
+                        </button>
+                        <button class="news-slider__arrow news-slider-next"> 
+                            <span class="icon-font">
+                                <svg class="icon icon-arrow-right">
+                                    <use xlink:href="#icon-arrow-right">
+                                    </use>
+                                </svg>
+                            </span> 
+                        </button>
+                    </div>
+                    <div class="news-slider__pagination">
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <svg hidden="hidden">
+        <defs>
+            <symbol id="icon-arrow-left" viewBox="0 0 32 32">
+                <title>
+                    arrow-left
+                </title>
+                <path d="M0.704 17.696l9.856 9.856c0.896 0.896 2.432 0.896 3.328 0s0.896-2.432 0-3.328l-5.792-5.856h21.568c1.312 0 2.368-1.056 2.368-2.368s-1.056-2.368-2.368-2.368h-21.568l5.824-5.824c0.896-0.896 0.896-2.432 0-3.328-0.48-0.48-1.088-0.704-1.696-0.704s-1.216 0.224-1.696 0.704l-9.824 9.824c-0.448 0.448-0.704 1.056-0.704 1.696s0.224 1.248 0.704 1.696z">
+                </path>
+            </symbol>
+            <symbol id="icon-arrow-right" viewBox="0 0 32 32">
+                <title>
+                    arrow-right
+                </title>
+            <path d="M31.296 14.336l-9.888-9.888c-0.896-0.896-2.432-0.896-3.328 0s-0.896 2.432 0 3.328l5.824 5.856h-21.536c-1.312 0-2.368 1.056-2.368 2.368s1.056 2.368 2.368 2.368h21.568l-5.856 5.824c-0.896 0.896-0.896 2.432 0 3.328 0.48 0.48 1.088 0.704 1.696 0.704s1.216-0.224 1.696-0.704l9.824-9.824c0.448-0.448 0.704-1.056 0.704-1.696s-0.224-1.248-0.704-1.664z">
+            </path>
+            </symbol>
+        </defs>
+    </svg>
+
+    <script th:src="@{/spaceflight/js/jquery.min.js}"></script>
+    <script th:src="@{/spaceflight/js/swiper.min.js}"></script>
+    <script  th:src="@{/spaceflight/js/script.js}"></script>
+    <script th:src="@{/spaceflight/js/slide.js}"></script>
+</body>
+</html>

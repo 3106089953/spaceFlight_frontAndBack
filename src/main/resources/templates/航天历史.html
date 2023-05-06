@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" th:href="@{/spaceflight/assets/images/favicon.ico}" />
+    <link type="text/css" rel="styleSheet" th:href="@{/spaceflight/assets/css/history.css}" />
+    <link type="text/css" rel="styleSheet" th:href="@{/spaceflight/assets/css/historyTimeline.css}" />
+    <title>航天历史</title>
+  </head>
+  <a th:href="@{/spaceflight}">
+    <button data-text="Home" class="btn btn-primary btn-ghost btn-border-stroke  btn-text-float-up">
+      <div class="btn-borders">
+        <div class="border-top"></div>
+        <div class="border-right"></div>
+        <div class="border-bottom"></div>
+        <div class="border-left"></div>
+      </div>
+      <span class="btn-text">HOME</span>
+    </button>
+  </a>
+  <a th:href="@{/spaceflight/getHistoryDataPage}">
+    <button data-text="数据展现" class="btn-primary btn-ghost btn-border-stroke  btn-text-float-up Data">
+      <div class="btn-borders">
+        <div class="border-top"></div>
+        <div class="border-right"></div>
+        <div class="border-bottom"></div>
+        <div class="border-left"></div>
+      </div>
+      <span class="btn-text">数据展现</span>
+    </button>
+  </a>
+  <div class="body-wrap">
+    <div class="pres-timeline" id="this-timeline">
+      <!--   <div class="periods-section"> -->
+      <div class="periods-container">
+        <section class="period-single" period="period1">
+          <h4 class="year">197x-198x</h4>
+          <h2 class="title">第一颗人造卫星</h2>
+          <p class="content">
+            1970年4月24日21时35分，中国第一枚运载火箭“长征一号”运载火箭载着“东方红一号”卫星从中国西北部甘肃酒泉卫星发射中心发射升空，21时48分进入预定轨道。该卫星发射成功标志着中国成为继苏联、美国、法国、日本之后世界上第五个用自制火箭发射国产卫星的国家。
+          </p>
+        </section>
+        <section class="period-single" period="period2">
+          <h4 class="year">198x-199x</h4>
+          <h2 class="title">首艘神舟飞船发射升空</h2>
+          <p class="content">1999年11月20日，首艘神舟飞船由一枚长征二号F火箭送入太空，在绕地球飞行14圈后返回地面。自此以后，中国成为继美、俄之后世界上第三个拥有载人航天技术的国家。</p>
+        </section>
+        <section class="period-single" period="period3">
+          <h4 class="year">199x-200x</h4>
+          <h2 class="title">中国第一艘载人飞船</h2>
+          <p class="content">
+            2003年10月15日，长征二号F火箭搭载神舟五号飞船发射升空，中国首名宇航员杨利伟乘坐神舟五号飞船进入太空。神舟五号载人飞船环绕地球运行14圈，安全飞行了21小时23分、60万公里，10月16日清晨6时23分，在内蒙古主着陆场成功着陆。
+          </p>
+        </section>
+        <section class="period-single" period="period4">
+          <h4 class="year">200x-201x</h4>
+          <h2 class="title">中国首个月球探测器</h2>
+          <p class="content">
+            2007年10月24日，中国首个月球探测器嫦娥一号在西昌卫星发射中心发射升空。该探测器围绕月球飞行，为月球表面拍摄高分辨率照片。2009年3月1日，嫦娥一号完成使命，撞击月球表面预定地点。</p>
+        </section>
+        <section class="period-single" period="period5">
+          <h4 class="year">201x-202x</h4>
+          <h2 class="title">世界首颗量子科学实验卫星</h2>
+          <p class="content">
+            2016年8月16日1时40分，中国研制的世界首颗量子科学实验卫星“墨子号”，在长征二号丁运载火箭的搭载下，在酒泉卫星发射中心成功发射升空，进入预定轨道。2022年5月，中国墨子号卫星实现1200千米地表量子态传输新纪录
+            。</p>
+        </section>
+        <section class="period-single" period="period6">
+          <h4 class="year">202x-203x</h4>
+          <h2 class="title">中国首次火星探测任务</h2>
+          <p class="content">2020年7月23日12时41分,中国首次火星探测任务在文昌举行。天问一号探测器在文昌航天发射场由长征五号遥四运载火箭发射升空。</p>
+        </section>
+        <div class="btn-back"></div>
+        <div class="btn-next"></div>
+      </div>
+      <!--   <div class="timeline-section"> -->
+      <div class="timeline-container">
+        <div class="timeline"></div>
+        <div class="btn-back"><svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+            <path fill="none" d="M0 0h30v30H0z" />
+            <path fill="#D8D8D8" fill-rule="evenodd"
+              d="M11.828 15l7.89-7.89-2.83-2.828L6.283 14.89l.11.11-.11.11L16.89 25.72l2.828-2.83" />
+          </svg></div>
+        <div class="btn-next"><svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+            <path fill="none" d="M0 0h30v30H0z" />
+            <path fill="#D8D8D8" fill-rule="evenodd"
+              d="M18.172 14.718l-7.89-7.89L13.112 4l10.606 10.607-.11.11.11.11-10.608 10.61-2.828-2.83 7.89-7.89" />
+          </svg></div>
+      </div>
+      <!--   <div class="cards-section"> -->
+      <div class="cards-container">
+
+        <section class="card-single active" period="period1">
+          <h4 class="year">1970</h4>
+          <!-- <h2 class="title">Lorem ipsum dolor sit amet.</h2> -->
+          <div class="content">
+            <img th:src="@{/spaceflight/assets/images/东方红一号.png}" alt="" />
+            <p>东方红一号由以钱学森为首任院长的中国空间技术研究院自行研制。该卫星设计的工作寿命20天，至1970年5月14日停止发射信号，与地面失去了联系。
+              这颗人造卫星与中国1964年的第一颗原子弹、1966年的第一颗装载核弹头导弹、1967年的第一颗氢弹并称为“两弹一星”。</p>
+            <p>“东方红一号”卫星的主要任务是进行卫星技术试验、探测电离层和大气层密度。卫星为近似球形的72面体，质量173千克，直径约1米、
+              采用自旋姿态稳定方式，转速为120/分。卫星飞行轨道为近地点439公里、远地点2384公里、轨道平面和地球赤道平面为倾角68.5度的近地椭圆轨道，运行地球一圈周期为114分钟。</p>
+          </div>
+        </section>
+
+        <section class="card-single" period="period2">
+          <h4 class="year">1999</h4>
+          <!-- <h2 class="title">Lorem ipsum dolor sit amet.</h2> -->
+          <div class="content">
+            <img th:src="@{/spaceflight/assets/images/神舟一号.jpg}" alt="" />
+            <p>神舟一号，简称“神一”，是中国载人航天工程发射的第一艘飞船，也是中华人民共和国载人航天计划中发射的第一艘无人试验飞船。</p>
+            <p>神舟一号飞船于北京时间1999年11月20日凌晨6点在酒泉卫星发射中心发射升空，于北京时间1999年11月21日凌晨3点41分顺利降落在内蒙古中部地区的着陆场，在太空中共飞行了21个小时 。
+              神舟一号是中国实施载人航天工程的第一次飞行试验，标志着中国航天事业迈出重要步伐，对突破载人航天技术具有重要意义，是中国航天史上的重要里程碑。</p>
+          </div>
+        </section>
+
+        <section class="card-single" period="period3">
+          <h4 class="year">2003</h4>
+          <!-- <h2 class="title">Lorem ipsum dolor sit amet.</h2> -->
+          <div class="content">
+            <img th:src="@{/spaceflight/assets/images/杨利伟.jpg}" alt="">
+            <p>2003年10月15日上午9时整，中国第一艘载人飞船神舟五号载人飞船从酒泉卫星发射中心载人航天发射场发射升空。
+              这是中国首次进行载人航天飞行，38岁的中国人民解放军航天员大队航天员杨利伟成为中国第一位“太空使者”。</p>
+            <p>在距地面343公里的太空中，杨利伟展示了中国国旗和联合国旗，向世界各国人民问好。他在工作日志背面写下：“为了人类的和平与进步，中国人来到太空了。”
+              神舟五号载人飞船的发射成功，标志着我国成为世界上第三个独立掌握载人航天技术的国家，实现了中华民族千年飞天的梦想，是中国航天史上的里程碑事件。</p>
+          </div>
+        </section>
+
+        <section class="card-single" period="period4">
+          <h4 class="year">2007</h4>
+          <!-- <h2 class="title">Lorem ipsum dolor sit amet.</h2> -->
+          <div class="content">
+            <img th:src="@{/spaceflight/assets/images/嫦娥一号.png}" alt="">
+            <p>嫦娥一号是中国探月计划中的第一颗绕月人造卫星，以中国古代神话人物嫦娥命名。其星体为立方体，两侧各有一个太阳帆板，最大跨度达18.1米，重2350千克，工作寿命一年 。</p>
+            <p>嫦娥一号卫星首次绕月探测的成功，树立了中国航天的第三个里程碑，突破了一大批具有自主知识产权的核心技术和关键技术，使中国成为世界上为数不多具有深空探测能力的国家。</p>
+          </div>
+        </section>
+
+        <section class="card-single" period="period5">
+          <h4 class="year">1816</h4>
+          <!-- <h2 class="title">Lorem ipsum dolor sit amet.</h2> -->
+          <div class="content">
+            <img th:src="@{/spaceflight/assets/images/墨子号.png}" alt="" />
+            <p>墨子号（Micius Satellite for Quantum Science Experiments ），是中国研制的首颗空间量子科学实验卫星。</p>
+            <p>墨子号卫星工程由中国科学院国家空间科学中心抓总负责 ，该卫星是中国科学院空间科学战略性先导科技专项首批科学实验卫星之一，
+              其主要科学目标是借助卫星平台，进行星地高速量子密钥分发实验，并在此基础上进行广域量子密钥网络实验，
+              以期在空间量子通信实用化方面取得重大突破；在空间尺度进行量子纠缠分发和量子隐形传态实验，开展空间尺度量子力学完备性检验的实验研究 。</p>
+          </div>
+        </section>
+
+        <section class="card-single" period="period6">
+          <h4 class="year">1816</h4>
+          <!-- <h2 class="title">Lorem ipsum dolor sit amet.</h2> -->
+          <div class="content">
+            <img th:src="@{/spaceflight/assets/images/天问一号.jpg}" alt="" />
+            <p>天问一号（代号：Tianwen 1），是由中国航天科技集团公司下属中国空间技术研究院抓总研制的探测器，负责执行中国第一次火星探测任务。</p>
+            <p>天问一号于2020年7月23日发射升空 ，并于2021年2月10日天问一号与火星交会，成功实施捕获制动进入环绕火星轨道。
+              对预选着陆区进行了3个月的详查后，于2021年5月15日成功实现软着陆在火星表面。天问一号在火星上首次留下中国印迹，
+              首次实现通过一次任务完成火星环绕、着陆和巡视三大目标，天问一号对火星的表面形貌、土壤特性、物质成分、水冰、大气、电离层、磁场等的科学探测，
+              实现了中国在深空探测领域的技术跨越而进入世界先进行列 。</p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+  <script th:src='@{/spaceflight/js/jquery.js}'></script>
+  <script th:src="@{/spaceflight/js/history.js}"></script>
+
+</html>
